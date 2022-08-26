@@ -36,4 +36,7 @@ yarn-error.log*
 /src/pages/backups
 /src/pages/working
 
+/src/store/backups
+/src/store/working
+
 /src/css/gallery_v1_style.css_copy.txt
