@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { getCartAsync } from './cart-actions';
+import { getCartAsync } from './cart-actions';  //uses createAsyncThunk() to make an async api call from BE
 //import { v4 as uuidv4 } from 'uuid'
 
 //if cart items already in LS pull from LS rather than api call to db - persists state - reduces processing
@@ -82,7 +82,7 @@ const cartSlice = createSlice({
       state.changed = true;
     } 
   },  //ends regular reducer
-  extraReducers: {  //handles api calls
+  extraReducers: {  //makes api calls to get cart data from firebase, update status,  
     [getCartAsync.pending]: (state, action) => {
       state.status = 'loading';
     },
